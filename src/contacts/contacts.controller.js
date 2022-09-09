@@ -1,10 +1,14 @@
+const {response} = require("express");
+const ContactsService = require("./contacts.service");
+
 class ContactsController{
     constructor(){
-
+        this.contactsService = new ContactsService();
     }
 
-    readAll(){
-
+    readAll = async (_, response) => {
+        const contacts = await this.contactsService.readAll();
+        return response.send(contacts);
     }
 
     readOne(){
@@ -23,3 +27,5 @@ class ContactsController{
 
     }
 }
+
+module.exports.ContactsController = ContactsController;

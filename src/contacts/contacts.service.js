@@ -1,25 +1,29 @@
+const ContactsRepository = require("./contacts.repository");
+
 class ContactsService{
     constructor(){
-
+        this.contactsRepository = new ContactsRepository();
     }
 
     readAll(){
+        return this.contactsRepository.readAll();
+    }
+
+    readOne(id){
 
     }
 
-    readOne(){
+    create(contactObj){
 
     }
 
-    create(){
+    update(id, contactObj){
 
     }
 
-    update(){
-
-    }
-
-    delete(){
+    delete(id){
 
     }
 }
+
+module.exports = ContactsService;

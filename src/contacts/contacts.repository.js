@@ -1,25 +1,26 @@
+const fs = require("fs/promises");
+
 class ContactsRepository{
-    constructor(){
+    async readAll(){
+        const contacts = JSON.parse(await fs.readFile("./contacts.json", "utf-8"));
+        return contacts
+    }
+
+    async readOne(id){
 
     }
 
-    readAll(){
+    async create(){
 
     }
 
-    readOne(){
+    async update(id){
 
     }
 
-    create(){
-
-    }
-
-    update(){
-
-    }
-
-    delete(){
+    async delete(id){
 
     }
 }
+
+module.exports = ContactsRepository;
