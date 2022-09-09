@@ -1,4 +1,4 @@
-class ContactRepository{
+class ContactsRepository{
     constructor(){
 
     }

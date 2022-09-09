@@ -1,13 +1,15 @@
 const {Router} = require("express");
 
-const contactRouter = Router();
+const contactsRouter = Router();
 
-contactRouter.get();
+contactsRouter.get("/", contactsController.readAll);
 
-contactRouter.get();
+contactsRouter.get("/:id", contactsController.readAll);
 
-contactRouter.post();
+contactsRouter.post("/", contactsController.create);
 
-contactRouter.delete();
+contactsRouter.delete("/:id", contactsController.delete);
 
-contactRouter.put();
+contactsRouter.put("/:id", contactsController.update);
+
+module.exports = contactsRouter;

@@ -1,4 +1,4 @@
-class ContactController{
+class ContactsController{
     constructor(){
 
     }

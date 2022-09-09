@@ -1,4 +1,4 @@
-class ContactService{
+class ContactsService{
     constructor(){
 
     }
