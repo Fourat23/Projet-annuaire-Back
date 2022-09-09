@@ -1,0 +1,24 @@
+{
+  "name": "projet-annuaire-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fourat23/Projet-annuaire-Back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fourat23/Projet-annuaire-Back/issues"
+  },
+  "homepage": "https://github.com/Fourat23/Projet-annuaire-Back#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
