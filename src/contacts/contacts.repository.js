@@ -15,8 +15,10 @@ class ContactsRepository{
 
     }
 
-    async update(id){
-
+    async updateOne(id, contactObj){
+        const contacts = JSON.parse(await fs.readFile("./contacts.json", "utf-8"));
+        contacts[id] = {id, ...contactObj };
+        await fs.writeFile("./contacts.json", JSON.stringify(contacts));
     }
 
     async delete(id){

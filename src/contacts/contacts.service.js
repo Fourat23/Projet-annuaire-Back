@@ -19,8 +19,10 @@ class ContactsService{
 
     }
 
-    update(id, contactObj){
-
+    async updateOne(id, contactObj){
+        const contacts = await this.contactsRepository.readOne(id);
+        if (!contacts) throw new Error(`Cannot find contact with id ${id}`);
+        return this.contactsRepository.updateOne(id, contactObj);
     }
 
     delete(id){

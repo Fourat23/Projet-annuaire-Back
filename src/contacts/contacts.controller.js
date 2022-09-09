@@ -25,8 +25,15 @@ class ContactsController{
 
     }
 
-    update(){
-
+    update = async (request, response) => {
+        try {
+            const id = request.params.id;
+            await this.contactsService.updateOne(id, request.body);
+            console.log(request.body);
+            response.send("Contact modifié");
+        } catch(e) {
+            response.status(404).send(e.message);
+        }
     }
 
     delete(){
