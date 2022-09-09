@@ -9,8 +9,10 @@ class ContactsService{
         return this.contactsRepository.readAll();
     }
 
-    readOne(id){
-
+    async readOne(id){
+        const contacts = await this.contactsRepository.readOne(id);
+        if (!contacts) throw new Error(`Cannot find contact with id ${id}`);
+        return contacts;
     }
 
     create(contactObj){

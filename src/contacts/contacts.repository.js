@@ -7,7 +7,8 @@ class ContactsRepository{
     }
 
     async readOne(id){
-
+        const contacts = JSON.parse(await fs.readFile("./contacts.json", "utf-8"));
+        return contacts[id];
     }
 
     async create(){

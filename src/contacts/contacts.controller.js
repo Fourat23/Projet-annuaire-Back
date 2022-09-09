@@ -11,8 +11,14 @@ class ContactsController{
         return response.send(contacts);
     }
 
-    readOne(){
-
+    readOne = async (request, response) => {
+        try {
+            const id = request.params.id
+            const contacts = await this.contactsService.readOne(id);
+            response.send(contacts);
+        } catch(e) {
+            response.status(404).send(e.message);
+        }
     }
 
     create(){

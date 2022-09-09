@@ -5,7 +5,7 @@ const contactsRouter = Router();
 
 contactsRouter.get("/", contactsController.readAll);
 
-contactsRouter.get("/:id", contactsController.readAll);
+contactsRouter.get("/:id", contactsController.readOne);
 
 contactsRouter.post("/", contactsController.create);
 
